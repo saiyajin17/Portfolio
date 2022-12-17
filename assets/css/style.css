@@ -420,7 +420,7 @@ input {
     border-radius: 50%;
     border: 2px solid var(--primary-color);
     position: absolute;
-    left: -0.56rem;
+    left: -7px;
     background-color: var(--bg-color);
 }
 
