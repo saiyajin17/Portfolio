@@ -198,6 +198,58 @@ input {
     display: none;
 }
 
+.mobileNav{
+    display: none;
+    height: 250px;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(117, 126, 135, 0.9);
+    color: #f1f1f1;
+}
+
+.nav__close{
+    z-index: 1000;
+}
+
+.mobList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+    padding: 2.5em 0;
+}
+.nav__toggle, .nav__close{
+    color: white;   
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    font-size: 22px;
+}
+.animateNav{
+    animation: 0.3s ease 1 dropMenu;
+}
+
+@keyframes dropMenu{
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 650px) {
+    
+    .nav__toggle{
+        display: block;
+    }
+    .nav__menu{
+        display: none;
+    }
+    
+}
+
 /* active */
 .active-link {
     opacity: 0.5;
@@ -205,6 +257,43 @@ input {
 
 .active-link:after {
     opacity: 1;
+    
+}
+
+/*scroll To Top button*/
+#scrollTopButton {
+    display: inline-block;
+    background-color: #333;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    cursor: pointer;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #scrollTopButton:hover {
+    transform: scale(1.1); 
+    transition: 0.3s;
+  }
+  #scrollTopButton:active {
+    background-color: #555;
+  }
+  #scrollTopButton.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+.up-arrow-icon{
+    color: white;
+    font-size: 28px;
+    position: relative;
+    top: 25%;
     
 }
 
@@ -518,6 +607,8 @@ input {
 
 .project__item {
     grid-template-columns: 5fr 7fr;
+    background-color: #f5efef7a;
+    
 }
 
 .project__img {
@@ -533,7 +624,7 @@ input {
 
 .project__title {
     margin-bottom: 0.8em;
-    text-align: justify;
+    text-align: left;
 }
 
 .project__desription {
@@ -546,12 +637,25 @@ input {
     margin-bottom: 1.25em;
 }
 
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+
+    gap: 10px;
+}
+
 .tags li {
-    display: inline-block;
     margin-right: 0.6em;
-    box-shadow: 0 1px 4px rgb(0 0 0/14%);
+    box-shadow: 0 1px 4px rgb(0 0 0/25%);
     padding: 0.3rem 0.6rem;
     border-radius: 0.2rem;
+}
+
+.tags li:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+    transition-duration: 0.2s;
 }
 
 .project__link {

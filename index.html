@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/image/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,6 +16,20 @@
 
     <header class="header" id="header">
         <nav class="nav container">
+            <div class="mobileNav animateNav">
+                <ul class="mobList">
+                    <li><a href="#services" class="nav__link col-sm-auto">Services</a></li>
+                    <li><a href="#resume" class="nav__link col-sm-auto">Resume</a></li>
+                    <li><a href="#portfolio" class="nav__link col-sm-auto">Portfolio</a></li>
+                    <li><a href="#contact" class="nav__link col-sm-auto">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-fill"></i>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
             <div class="nav__menu " id="nav-menu">
                 <ul class="nav__list col-sm-auto">
                     <li><a href="#home" class="nav__link col-sm-auto">Hello</a></li>
@@ -23,16 +38,12 @@
                     <li><a href="#portfolio" class="nav__link col-sm-auto">Portfolio</a></li>
                     <li><a href="#contact" class="nav__link col-sm-auto">Contact</a></li>
                 </ul>
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-fill"></i>
-                </div>
-            </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="ri-menu-line"></i>
             </div>
         </nav>
     </header>
-
+    <a id="scrollTopButton">
+        <i class="ri-arrow-up-s-line up-arrow-icon"></i>
+    </a>
     <main class="main">
         <section class="home" id="home">
             <div class="home__container container grid">
@@ -41,8 +52,8 @@
                     <h1 class="home__name">Anurag Tiwari</h1>
                     <p class="home__work">full-stack developer</p>
                     <dl class="home__list">
-                        <dt>Age:</dt>
-                        <dd>25</dd>
+                        <!-- <dt>Age:</dt>
+                        <dd>25</dd> -->
                         <dt>Phone:</dt>
                         <dd>+91-8756887482</dd>
                         <dt>Email:</dt>
@@ -60,6 +71,7 @@
             </div>
         </section>
 
+        <!-- Intro -->
         <section class="hello section container">
             <h2 class="section__title">
                 Hi_
@@ -74,6 +86,7 @@
                 DOWNLOAD CV</a>
         </section>
 
+        <!-- Services -->
         <section class="services section container" id="services">
             <h2 class="section__title">
                 Services_
@@ -87,9 +100,7 @@
                     <h3 class="services__title text-lg">
                         WEB DESIGN
                     </h3>
-                    <p class="services__detailam an expert web designer and developer. Contrary to popular belief,
-Lorem Ipsum is not simply random text. It has">am an expert web designer and developer. Contrary to popular belief,
-                        Lorem Ipsum is not simply random text. It has</p>
+                    <p class="services__detail">I plan, create, and maintain websites with the aim of delivering a visually appealing and user-friendly experience.</p>
                 </div>
 
                 <div class="services__item">
@@ -100,9 +111,7 @@ Lorem Ipsum is not simply random text. It has">am an expert web designer and dev
                     <h3 class="services__title text-lg">
                         WEB DEVELOPMENT
                     </h3>
-                    <p class="services__detailam an expert web designer and developer. Contrary to popular belief,
-Lorem Ipsum is not simply random text. It has">am an expert web designer and developer. Contrary to popular belief,
-                        Lorem Ipsum is not simply random text. It has</p>
+                    <p class="services__detail">I can build and maintain websites, using programming languages and technologies such as HTML, CSS, JavaScript, and various new technologies.</p>
                 </div>
 
                 <div class="services__item">
@@ -113,9 +122,7 @@ Lorem Ipsum is not simply random text. It has">am an expert web designer and dev
                     <h3 class="services__title text-lg">
                         CREATIVE DESIGN
                     </h3>
-                    <p class="services__detailam an expert web designer and developer. Contrary to popular belief,
-Lorem Ipsum is not simply random text. It has">am an expert web designer and developer. Contrary to popular belief,
-                        Lorem Ipsum is not simply random text. It has</p>
+                    <p class="services__detail">Follows a design approach that emphasizes originality, innovation, and uniqueness in the creation of visual and graphic elements for websites, branding, and marketing materials.</p>
                 </div>
 
                 <div class="services__item">
@@ -126,9 +133,7 @@ Lorem Ipsum is not simply random text. It has">am an expert web designer and dev
                     <h3 class="services__title text-lg">
                         RESPONSIVE DESIGN
                     </h3>
-                    <p class="services__detailam an expert web designer and developer. Contrary to popular belief,
-Lorem Ipsum is not simply random text. It has">am an expert web designer and developer. Contrary to popular belief,
-                        Lorem Ipsum is not simply random text. It has</p>
+                    <p class="services__detail">A web design that involves creating websites that can adapt to different screen sizes and devices, ensuring a consistent user experience across desktop, tablet, and mobile devices.</p>
                 </div>
             </div>
         </section>
@@ -200,11 +205,11 @@ Lorem Ipsum is not simply random text. It has">am an expert web designer and dev
                         <div class="skills__data">
                             <div class="skills__titles">
                                 <p class="skills__name text-sm">CSS</p>
-                                <span class="skills__number text-sm">70%</span>
+                                <span class="skills__number text-sm">80%</span>
                             </div>
 
                             <div class="skills__bar">
-                                <span class="skills__percentage" style="width: 70%;"></span>
+                                <span class="skills__percentage" style="width: 80%;"></span>
                             </div>
                         </div>
 
@@ -272,11 +277,11 @@ Lorem Ipsum is not simply random text. It has">am an expert web designer and dev
                         <div class="skills__data">
                             <div class="skills__titles">
                                 <p class="skills__name text-sm">Java</p>
-                                <span class="skills__number text-sm">85%</span>
+                                <span class="skills__number text-sm">70%</span>
                             </div>
 
                             <div class="skills__bar">
-                                <span class="skills__percentage" style="width:85%;"></span>
+                                <span class="skills__percentage" style="width:70%;"></span>
                             </div>
                         </div>
 
@@ -312,66 +317,78 @@ Lorem Ipsum is not simply random text. It has">am an expert web designer and dev
 
             <div class="project__categories">
                 <button class="category__btn text-xs active-work" data-filter="all">ALL</button>
-                <button class="category__btn text-xs" data-filter=".web">WEB-SITES</button>
                 <button class="category__btn text-xs" data-filter=".landing">LANDING PAGES</button>
+                <button class="category__btn text-xs" data-filter=".web">WEB-SITES</button>
             </div>
 
             <div class="projects__container grid">
-                <div class="project__item grid mix web">
-                    <img src="assets/image/project-1.png" alt="" class="project__img">
+                <div class="project__item  mix web">
+                    <!-- <img src="assets/image/project-1.png" alt="" class="project__img"> -->
 
                     <div class="project__data">
-                        <h3 class="project__title text-lg">VEHICLE LOAN APPLICATION</h3>
-                        <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                            ipsa sit perspiciatis similique recusandae non, quia eius a possimus. Deleniti quo similique
-                            dolorem sed adipisci voluptas natus et commodi sit.</p>
+                        <h3 class="project__title text-lg">VEHICLE LOAN     APPLICATION</h3>
+                        <p class="project__description">Developed a web application to simplify the loan application process for vehicle purchases. The application features a user-friendly interface and a secure database to manage loan information, resulting in an efficient loan processing system.</p>
                         <h4 class="project__stack text-xs">USED STACK:</h4>
                         <ul class="tags text-sm">
                             <li>Java</li>
                             <li>Spring-Boot</li>
                             <li>Angular</li>
-                            <li>SQL</li>
+                            <li>Oracle</li>
                         </ul>
-                        <a href="#" class="project__link text-sm">www.vehicleapplication.com</a>
+                        <!-- <a href="#" class="project__link text-sm">www.vehicleapplication.com</a> -->
                     </div>
                 </div>
 
-                <div class="project__item grid mix landing">
-                    <img src="assets/image/project-2.png" alt="" class="project__img">
+                <div class="project__item mix landing">
+                    <!-- <img src="assets/image/project-2.png" alt="" class="project__img"> -->
 
                     <div class="project__data">
-                        <h3 class="project__title text-lg">AMAZON CLONE</h3>
-                        <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                            ipsa sit perspiciatis similique recusandae non, quia eius a possimus. Deleniti quo similique
-                            dolorem sed adipisci voluptas natus et commodi sit.</p>
+                        <h3 class="project__title text-lg">RAZORPAY CLONE</h3>
+                        <p class="project__description">Developed a landing page to showcase a payment gateway solution that provides businesses with a secure and convenient way to accept payments from their customers. The landing page highlights the solution's key features, benefits, and integration options, helping businesses understand the value and capabilities of the solution.</p>
                         <h4 class="project__stack text-xs">USED STACK:</h4>
                         <ul class="tags text-sm">
                             <li>HTML5</li>
                             <li>CSS</li>
                             <li>JavaScript</li>
-                            <li>React</li>
+                            <li>Tailwind</li>
                             <li>Firebase</li>
                         </ul>
-                        <a href="#" class="project__link text-sm">www.amazonclone.com</a>
+                        <!-- <a href="#" class="project__link text-sm">www.amazonclone.com</a> -->
                     </div>
                 </div>
 
-                <div class="project__item grid mix landing">
-                    <img src="assets/image/project-3.png" alt="" class="project__img">
+                <div class="project__item mix web">
+                    <!-- <img src="assets/image/project-3.png" alt="" class="project__img"> -->
 
                     <div class="project__data">
-                        <h3 class="project__title text-lg">YOUTUBE CLONE</h3>
-                        <p class="project__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                            ipsa sit perspiciatis similique recusandae non, quia eius a possimus. Deleniti quo similique
-                            dolorem sed adipisci voluptas natus et commodi sit.</p>
+                        <h3 class="project__title text-lg">VIDEO STREAMING APPLICATION</h3>
+                        <p class="project__description">Designed and built a video streaming platform that allows users to access and view a wide range of video content. The platform delivers an engaging user experience with seamless video playback and efficient back-end processing, providing users with a convenient and enjoyable way to consume video content.</p>
                         <h4 class="project__stack text-xs">USED STACK:</h4>
                         <ul class="tags text-sm">
                             <li>Typescript</li>
-                            <li>JavaScript</li>
                             <li>Angular</li>
+                            <li>SpringBoot</li>
+                            <li>AWS</li>
+                        </ul>
+                        <!-- <a href="#" class="project__link text-sm">www.dusrayoutube.com</a> -->
+                    </div>
+                </div>
+
+                <div class="project__item mix landing">
+                    <!-- <img src="assets/image/project-2.png" alt="" class="project__img"> -->
+
+                    <div class="project__data">
+                        <h3 class="project__title text-lg">DISCORD CLONE</h3>
+                        <p class="project__description">Created a landing page to promote a chat and communication platform for online communities and gaming groups. The landing page demonstrates the platform's real-time messaging, voice and video calls, and customizable features, showcasing the solution's ability to enhance the user experience and connect users in meaningful ways. </p>
+                        <h4 class="project__stack text-xs">USED STACK:</h4>
+                        <ul class="tags text-sm">
+                            <li>HTML5</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Tailwind</li>
                             <li>Firebase</li>
                         </ul>
-                        <a href="#" class="project__link text-sm">www.dusrayoutube.com</a>
+                        <!-- <a href="#" class="project__link text-sm">www.amazonclone.com</a> -->
                     </div>
                 </div>
             </div>
@@ -445,7 +462,7 @@ Lorem Ipsum is not simply random text. It has">am an expert web designer and dev
             </div>
         </section>
     </main>
-
+    
     <script src="assets/js/mixitup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

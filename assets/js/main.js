@@ -1,3 +1,44 @@
+/* NavBar */
+const navi=document.getElementsByClassName("nav__toggle")[0];
+navi.addEventListener('click',()=>{
+    let menuIcon=document.getElementsByClassName("mobileNav")[0];
+    let crossIcon=document.getElementsByClassName("nav__close")[0];
+    menuIcon.style.display="block";
+    navi.style.display='none';
+    crossIcon.style.display='block'
+})
+
+const cross=document.getElementsByClassName("nav__close")[0];
+cross.addEventListener('click',()=>{
+    let menuIcon=document.getElementsByClassName("mobileNav")[0];
+    let crossIcon=document.getElementsByClassName("nav__close")[0];
+    menuIcon.style.display="none";
+    navi.style.display='block';
+    crossIcon.style.display='none'
+})
+
+
+/* scroll To Top button */
+var btn = document.querySelector('#scrollTopButton');
+
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 300) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+});
+
+btn.addEventListener("click", function(e) {
+  e.preventDefault();
+  const htmlBody = document.querySelectorAll("html, body");
+  htmlBody.forEach((element) => {
+    element.scrollTop = 0;
+  });
+});
+
+
+
 /* Mixitup */
 
 var mixerProjects = mixitup(".projects__container", {
@@ -62,3 +103,4 @@ const sendEmail = (ele) => {
 };
 
 contactForm.addEventListener('submit', sendEmail);
+
