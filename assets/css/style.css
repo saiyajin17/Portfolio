@@ -400,6 +400,7 @@ input {
 
 .button:hover {
     background-color: var(--primary-color-alt);
+    color: white;
 }
 
 .button--flex {
